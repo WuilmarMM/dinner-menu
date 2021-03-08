@@ -6,8 +6,8 @@ export default class MenuItem extends React.Component {
   }
   
   handleClick() {
-    this.setState(value);{
-      this.state.push(value)
+    this.setState();{
+      value.push(value+1)
     }
   }
   render() {

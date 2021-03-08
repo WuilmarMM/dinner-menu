@@ -1,6 +1,7 @@
 
 import "./App.css"
 import Menu from "./components/Menu"
+import Cart from "./components/Cart"
 
 function App() {
   let data = [
@@ -66,6 +67,7 @@ function App() {
       {data.map((menu) => (
         <Menu {...menu}></Menu>
       ))}
+      <Cart></Cart>
     </div>
   )
 }

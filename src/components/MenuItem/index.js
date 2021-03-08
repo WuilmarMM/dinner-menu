@@ -1,15 +1,19 @@
 import React from "react"
 
 export default class MenuItem extends React.Component {
-  myArray = {
-   value:[0]
- }
-  
+  constructor(props) {
+    super(props)
+    this.state = { value: this.props.value }
+  }
+
   handleClick() {
-    
-    this.setState(previousState => ({
-      myArray: [...previousState.myArray, 'new value']
-  }));
+    this.setState((prevState) => {
+      let newValue = prevState.value + 1
+      this.props.updateValue(newValue)
+      return {
+        value: newValue,
+      }
+    })
   }
   render() {
     return (<div key={this.props.itemId} className="menu-item" id={`menu-item-${this.props.itemId}`}>

@@ -14,7 +14,7 @@ export default class Menu extends React.Component {
                 <h1 style={this.h1style}>{this.props.menuName} Menu</h1>
                 {this.props.menuItems.map((menuId) => {
                     return (
-                        <MenuItem {...menuId}></MenuItem>)
+                        <MenuItem key={this.props.itemId} {...menuId}></MenuItem>)
                 })}
             </div>
         )

@@ -3,7 +3,7 @@ import React from "react"
 export default class MenuItem extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { value: this.props.value }
+    this.state = { value:[0] }
   }
 
   handleClick() {

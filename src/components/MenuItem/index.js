@@ -1,11 +1,13 @@
 import React from "react"
 
 export default class MenuItem extends React.Component {
-  arrayvar = [{ value: [0] }]
-handleClick(){
+   
+  handleClick() {
+    arrayNum = [{ value: [0] }]
     this.setState( prevState => {
-       let newValue = prevState + 1;
-        arrayvar = [...prevState.arrayvar, newValue]
+      let newValue = prevState + 1;
+      console.log(arrayNum)
+        arrayNum = [...prevState.arrayvar, newValue]
     })
   }
   render() {

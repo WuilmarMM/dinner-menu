@@ -2,12 +2,12 @@ import React from "react"
 
 export default class MenuItem extends React.Component {
   state = {
-    value:[0]
+    numbers:[0]
   }
   
   handleClick() {
     this.setState();{
-      value.push(value+1)
+      numbers.push(number+1)
     }
   }
   render() {

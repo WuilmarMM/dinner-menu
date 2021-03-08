@@ -2,7 +2,8 @@ import React from "react"
 
 export default class MenuItem extends React.Component {
   render() {
-      return (<div className="menu-item" id={`menu-item-${this.props.itemId}`}>
+    return (<div className="menu-item" id={`menu-item-${this.props.itemId}`}>
+              <br></br>
               <span>${this.props.itemPrice }</span>
               <h2>{this.props.itemName}</h2>
               <p>{this.props.itemDescription}</p>

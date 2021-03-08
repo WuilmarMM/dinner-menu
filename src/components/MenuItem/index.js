@@ -3,7 +3,7 @@ import React from "react"
 export default class MenuItem extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { value:0 }
+    this.state = { value:[0] }
   }
 
   handleClick() {
@@ -20,7 +20,7 @@ export default class MenuItem extends React.Component {
               <h2>{this.props.itemName}</h2>
               <span>${this.props.itemPrice }</span>
               <p>{this.props.itemDescription}</p>
-          <button onClick={this.handleClick}>Add to Cart</button>
+          <button onClick={()=>this.handleClick()}>Add to Cart</button>
           </div>
     );
   }

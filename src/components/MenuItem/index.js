@@ -3,16 +3,13 @@ import React from "react"
 export default class MenuItem extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { value:[0] }
+    
   }
-
+arrayvar = [{ value: [0] }]
   handleClick() {
-    this.setState((prevState) => {
-      let newValue = prevState.value + 1
-      return {
-        value: newValue,
-      }
-    })
+    this.setState(prevState => ({
+      arrayvar: [...prevState.arrayvar, value]
+    }))
   }
   render() {
     return (<div key={this.props.itemId} className="menu-item" id={`menu-item-${this.props.itemId}`}>

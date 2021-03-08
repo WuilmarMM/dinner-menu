@@ -3,13 +3,13 @@ import React from "react"
 export default class MenuItem extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { value:0 }
+    this.state = { value:[0] }
   }
 
   handleClick() {
     this.setState((prevState) => {
       let newValue = prevState.value + 1
-      this.props.updateValue(newValue)
+      this.prevState.updateValue(newValue)
       return {
         value: newValue,
       }

@@ -9,7 +9,8 @@ export default class MenuItem extends React.Component {
 
   handleClick() {
     this.setState(prevState => ({
-      arrayvar: ([...prevState.arrayvar, newvalue]) 
+     let newValue = prevState + 1,
+      arrayvar: [...prevState.arrayvar, newValue]
     }))
   }
   render() {
